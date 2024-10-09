@@ -554,8 +554,9 @@ footer {
     .content-body-rizmi p {
         font-size: 14px;
     }
-    .title {
+    .title-komsat {
         font-size: 19px !important
+        
     }
     .sumber,
     .penulis {
@@ -665,7 +666,7 @@ footer {
     .content-body-rizmi p {
         font-size: 13px;
     }
-    .title {
+    .title-komsat {
         font-size: 17px !important;
     }
     .sumber,
@@ -695,7 +696,7 @@ footer {
     .content-body-rizmi p {
         font-size: 12px;
     }
-    .title {
+    .title-komsat {
         font-size: 16px !important;
     }
     .sumber {

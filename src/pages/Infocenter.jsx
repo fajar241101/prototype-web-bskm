@@ -39,7 +39,7 @@ const Infocenter = () => {
             <ul className='navbar'>
                 <li><a><Link to="/homepage">Beranda</Link></a></li>
                 <li><a><Link to="/profile">Profile</Link></a></li>
-                <li><a href='peta.html'>Tulisan Kader</a></li>
+                <li><a><Link to="/tulisan">Tulisan Kader</Link></a></li>
                 <li className='dropdown'>
                     <a>Profil Komsat<i className='fas fa-angle-down' style={{fontSize: '17px', fontWeight: 600}}></i></a>
                     <ul className='dropdown-content'>
@@ -60,7 +60,7 @@ const Infocenter = () => {
             <div className='bar'></div>
         </div>
     </header>
-    <main className="content">
+    <main className="content-infocenter">
         <div className="peta-lokasi">
             <h1>Peta Lokasi Sekretariat IMM BSKM</h1>
             <div className="map-text-button">
@@ -105,6 +105,53 @@ const Infocenter = () => {
                 {/* <div className="column2">
                     <img src={{bskmImg}} alt="Infografis Kalurahan Tlogoadi" style={{width: '100%'}}/>
                 </div> */}
+            </div>
+        </div>
+    </main>
+    <main className="content-kontak">
+        <div className="title-contact">
+            <div className="contact">
+                <div className="bonjeruk">
+                    <div className="name">Pimpinan Komisariat Al-Khawarizmi</div>
+                    <div className="underline2"></div>
+                    {/* <div className="icon"><i className="fas fa-envelope fa-fw"></i>-</div>
+                    <div className="icon"><i className="fab fa-whatsapp fa-fw"></i>-</div> */}
+                    <div className="icon"><i className="fab fa-instagram fa-fw"></i>immrizmi_ugm</div>
+                    {/* <div className="icon"><i className="fas fa-globe-americas fa-fw"></i>-</div> */}
+                </div>
+                <div className="sukarara">
+                    <div className="name">Pimpinan Komisariat Al-Baitar</div>
+                    <div className="underline2"></div>
+                    <div className="icon"><i className="fas fa-envelope fa-fw"></i>baitaribnu@gmail.com</div>
+                    {/* <div className="icon"><i className="fab fa-youtube fa-fw"></i>-</div> */}
+                    <div className="icon"><i className="fab fa-instagram fa-fw"></i>immbaitar_ugm</div>
+                    {/* <div className="icon"><i className="fas fa-globe-americas fa-fw"></i>-</div> */}
+                </div>
+                <div className="sukarara">
+                    <div className="name">Pimpinan Komisariat Ibnu-Khaldun</div>
+                    <div className="underline2"></div>
+                    {/* <div className="icon"><i className="fas fa-envelope fa-fw"></i>-</div>
+                    <div className="icon"><i className="fab fa-youtube fa-fw"></i>-</div> */}
+                    <div className="icon"><i className="fab fa-instagram fa-fw"></i>immugm_ibnukhaldun</div>
+                    {/* <div className="icon"><i className="fas fa-globe-americas fa-fw"></i>-</div> */}
+                </div>
+                <div className="hikayat-jonggat">
+                    <div className="name">Pimpinan Komisariat Sutan Mansyur</div>
+                    <div className="underline2"></div>
+                    <div className="icon"><i className="fas fa-envelope fa-fw"></i>SUMANIORA</div>
+                    <div className="icon"><i className="fab fa-youtube fa-fw"></i>@immuny_suman</div>
+                    <div className="icon"><i className="fab fa-instagram fa-fw"></i>immunysuman</div>
+                    <div className="icon"><i className="fas fa-globe-americas fa-fw"></i>@immuny_suman</div>
+                    <div className="icon"><i className="fas fa-globe-americas fa-fw"></i>Imm Sutan Mansur Uny (imm uny)</div>
+                </div>
+                <div className="hikayat-jonggat">
+                    <div className="name">Pimpinan Komisariat Ahmad Badawi</div>
+                    <div className="underline2"></div>
+                    <div className="icon"><i className="fas fa-envelope fa-fw"></i>kknmentarimlati@gmail.com</div>
+                    <div className="icon"><i className="fab fa-youtube fa-fw"></i>@kknmentarimlati</div>
+                    <div className="icon"><i className="fab fa-instagram fa-fw"></i>@mentari.mlati</div>
+                    <div className="icon"><i className="fas fa-globe-americas fa-fw"></i>mentari-mlati.vercel.app</div>
+                </div>
             </div>
         </div>
     </main>

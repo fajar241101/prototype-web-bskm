@@ -1,6 +1,10 @@
-html,
-body {
+* {
     box-sizing: border-box;
+}
+
+html,
+body,
+button {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -11,19 +15,28 @@ body {
 body {
     display: flex;
     flex-direction: column;
-}
-
-.content-badawi {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
     color: #222;
 }
 
-header,
+.content {
+    flex: 1 0 auto;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
 .navbar {
+    overflow: hidden;
+}
+
+
+/*revisi*/
+
+header
+/*,
+.navbar*/
+
+{
     display: flex;
     justify-content: space-between;
 }
@@ -35,7 +48,7 @@ header {
     align-items: center;
     height: 75px;
     border-bottom: 1px solid #ddd;
-    background-color: #fff;
+    background-color: #Fff;
     flex-shrink: 0;
     z-index: 999;
 }
@@ -44,7 +57,10 @@ header {
     margin-left: 5%;
 }
 
-#navbar {
+
+/*revisi*/
+
+nav {
     margin-right: 5%;
 }
 
@@ -57,6 +73,9 @@ ul {
 .navbar>li {
     padding: 12px 0;
     margin: 0 25px;
+    /*revisi*/
+    float: left;
+    display: block;
 }
 
 .navbar>li:nth-child(1) {
@@ -72,13 +91,24 @@ ul {
     color: #222;
     font-size: 17px;
     font-weight: 600;
-    padding: 10px 0;
+    /*revisi*/
+    padding: 12px 0;
     position: relative;
+}
+
+
+/*revisi*/
+
+.dropdown {
+    float: left;
+    overflow: hidden;
 }
 
 .navbar li a:hover,
 .dropdown:hover>a {
     color: #800000;
+    /*revisi*/
+    cursor: pointer;
 }
 
 .active-navbar {
@@ -104,16 +134,19 @@ ul {
 
 .dropdown-content {
     position: absolute;
-    top: 60px;
-    display: flex;
-    flex-direction: column;
+    display: none;
+    /*revisi*/
+    top: 55px;
+    /*display: flex;
+    flex-direction: column;*/
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     color: #222;
     padding: 12px 0;
-    display: none;
-    width: 200px;
+    /*revisi*/
+    max-width: 200px;
+    z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
@@ -122,6 +155,8 @@ ul {
 
 .dropdown-content li {
     padding: 12px;
+    float: none;
+    display: block;
 }
 
 .dropdown-content li a {
@@ -129,7 +164,7 @@ ul {
 }
 
 .dropdown-content li:hover {
-    background-color: #80b2b8;
+    background-color: #c3e7ee;
 }
 
 .menu-bar {
@@ -172,130 +207,144 @@ ul {
     -o-transform: translateY(-6px) rotate(-45deg);
 }
 
-.paragraf {
+
+/*tambahan dan revisi*/
+
+.content {
+    display: flex;
+    margin-top: 5%;
+    position: relative;
+}
+
+.bagian1 {
+    flex: 1;
+}
+
+.container-bagian1 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+}
+
+.list-proker {
+    height: 360px;
+    overflow-y: auto;
+}
+
+.list-proker a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-proker a:nth-child(1) {
+    border-top: 1px solid #ddd;
+}
+
+.active {
+    color: #800000 !important;
+}
+
+.list-proker a:hover {
+    color: #800000;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form button {
+    font-size: 16px;
+    font-weight: 600;
     width: 100%;
-    text-align: justify;
+    cursor: pointer;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 25px;
+    border: 2px solid #222;
 }
 
-.referensi {
-    overflow-x: hidden;
+form button:hover {
+    background-color: #222;
+    color: #fff;
 }
 
-.referensi>p,
-.paragraf>p {
-    text-align: justify;
+.bagian2 {
+    flex: 3;
+    margin-left: 10%;
+}
+
+.container,
+.previous-next-btn {
+    width: 100%;
+}
+
+.container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 7%;
+}
+
+.container p:nth-child(3) {
     line-height: 1.5;
 }
 
-.img-container-badawi {
+.videoWrapper {
     position: relative;
-    margin-top: 25px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
 }
 
-.img-container-badawi>img {
+.bookWrapper {
+    position: relative;
+    padding-bottom: 140.66%;
+    height: 0;
+}
+
+.bookWrapper2 {
+    position: relative;
+    padding-bottom: 81%;
+}
+
+.bookWrapper3 {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.bookWrapper iframe,
+.bookWrapper2 iframe,
+.bookWrapper3 iframe,
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 40vw;
-    height: 25vw;
-    object-fit: cover;
+    height: 100%;
 }
 
-.penulis {
-    font-size: 14px;
+.deskripsi {
+    line-height: 1.5;
 }
 
-.sumber {
-    margin-top: 0;
-    text-align: center !important;
-    text-indent: 0 !important;
-    color: #555;
-    font-size: 14px;
-}
-
-.content-badawi {
-    display: flex;
-}
-
-.artikel {
-    margin-top: 5%;
-    flex: 3;
-    padding: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.list-artikel {
-    margin-top: 5%;
-    flex: 1;
-    padding: 50px;
-}
-
-.title-badawi {
-    margin-top: 0;
-    font-size: 21px;
-    font-weight: 500;
-}
-
-.row-badawi {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.column-badawi {
-    flex: 100%;
-    max-width: 100%;
-}
-
-.column-badawi a {
-    text-decoration: none;
-    color: #222;
-}
-
-.content-body-badawi {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding-bottom: 5px;
-}
-
-.content-body-badawi:hover {
-    box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 10px 14px 0 rgba(0, 0, 0, 0.2);
-}
-
-.content-body-badawi img {
+.previous-next-btn form button {
+    padding: 12px 16px;
     width: 100%;
-    height: 12vw;
-    object-fit: cover;
-}
-
-.content-body-badawi p {
-    font-size: 15px;
     font-weight: 600;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding-left: 5px;
-    padding-right: 5px;
+    border: none;
 }
 
-.desa,
-.destinasi,
-.artikel-lain {
-    margin-bottom: 20px;
+.previous-next-btn form button:hover {
+    background-color: #222;
 }
 
-.artikel-lain a {
-    text-decoration: none;
-    color: #222;
-    font-size: 16px;
-}
-
-.artikel-lain a:hover {
-    color: #800000;
+.next,
+.previous {
+    background-color: #800000;
+    color: #fff;
+    border-radius: 25px;
 }
 
 footer {
@@ -321,7 +370,7 @@ footer {
 .bottom-nav,
 .list-logo {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -395,51 +444,6 @@ footer {
     }
 }
 
-@media screen and (max-width:1010px) {
-    .prev-btn {
-        left: 18.75%;
-    }
-    .next-btn {
-        right: 18.75%;
-    }
-    .prev-btn,
-    .next-btn {
-        font-size: 19px;
-        padding: 15px;
-    }
-}
-
-@media screen and (max-width:1030px) {
-    .content {
-        flex-direction: column;
-    }
-    .list-artikel div:nth-child(2) .row-badawi {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .list-artikel div:nth-child(1) .row-badawi .column,
-    .list-artikel div:nth-child(2) .row-badawi .column {
-        flex: 50%;
-        max-width: 40%;
-    }
-    .list-artikel div:nth-child(1) .row-badawi .column a .content-body-badawi img,
-    .list-artikel div:nth-child(2) .row-badawi .column a .content-body-badawi img {
-        height: 25vw;
-    }
-    .artikel {
-        margin-bottom: 100px;
-    }
-    .list-artikel {
-        padding: 0px !important;
-    }
-    .img-container-badawi>img {
-        width: 100%;
-        max-width: 50vw;
-        height: 31.25vw;
-    }
-}
-
 @media screen and (max-width:921px) {
     .menu-bar {
         display: block;
@@ -460,6 +464,18 @@ footer {
     .navbar>li:nth-child(5) {
         margin-right: 25px;
     }
+    /*revisi
+    .navbar .responsive {
+        position: relative;
+    }
+    .navbar .responsive li {
+        float: none;
+        display: block !important;
+        text-align: left;
+    }
+    .navbar .responsive .dropdown {
+        float: none;
+    }*/
     .show-navbar {
         display: block;
     }
@@ -473,9 +489,7 @@ footer {
         width: 100%;
         border-radius: 0;
         margin-top: 25px;
-        background-color: #80b2b8;
-        margin-left: -25px;
-        margin-right: -25px;
+        background-color: #c3e7ee;
         padding-left: 25px;
         padding-right: 25px;
     }
@@ -488,29 +502,21 @@ footer {
     .dropdown-content li:hover {
         background-color: transparent;
     }
+    .bagian1 {
+        display: none;
+    }
+    .bagian2 {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width:800px) {
     .list-logo a img {
         height: 80px;
     }
-    .prev-btn {
-        left: 12.5%;
-    }
-    .next-btn {
-        right: 12.5%;
-    }
-    .prev-btn,
-    .next-btn {
-        font-size: 18px;
-        padding: 14px;
-    }
 }
 
 @media screen and (max-width:725px) {
-    .content-badawi{
-        flex-direction: column;
-    }
     .list-logo a img {
         height: 70px;
     }
@@ -537,8 +543,9 @@ footer {
     h1 {
         font-size: 28px;
     }
-    .artikel-lain a,
-    p {
+    .previous,
+    .next,
+    .container>p {
         font-size: 15px;
     }
     .navbar li a {
@@ -547,33 +554,6 @@ footer {
     .dropdown-content li a,
     .bottom-nav {
         font-size: 14px;
-    }
-    h3 {
-        font-size: 18.8px;
-    }
-    .content-body-badawi p {
-        font-size: 14px;
-    }
-    .title-komsat {
-        font-size: 19px !important
-    }
-    .sumber,
-    .penulis {
-        font-size: 13px;
-    }
-}
-
-@media screen and(max-width:610px) {
-    .prev-btn {
-        left: 6.25%;
-    }
-    .next-btn {
-        right: 6.25%;
-    }
-    .prev-btn,
-    .next-btn {
-        font-size: 17px;
-        padding: 13px;
     }
 }
 
@@ -584,43 +564,6 @@ footer {
     }
     .list-logo a img {
         height: 50px;
-    }
-}
-
-@media screen and (max-width:550px) {
-    .img-container-badawi>img {
-        width: 100%;
-        max-width: 100vw;
-        height: calc(100vw*0.5);
-    }
-    .list-artikel div:nth-child(1) .row-badawi .column,
-    .list-artikel div:nth-child(2) .row-badawi .column {
-        flex: 100%;
-        max-width: 100%;
-    }
-    .list-artikel div:nth-child(1) .row-badawi .column a .content-body-badawi img,
-    .list-artikel div:nth-child(2) .row-badawi .column a .content-body-badawi img {
-        height: 62.5vw;
-    }
-    .img-container-badawi>img {
-        width: 100%;
-    }
-    .artikel {
-        padding: 20px !important;
-    }
-}
-
-@media screen and (max-width:420px) {
-    .prev-btn {
-        left: 0;
-    }
-    .next-btn {
-        right: 0;
-    }
-    .prev-btn,
-    .next-btn {
-        font-size: 16px;
-        padding: 12px;
     }
 }
 
@@ -642,14 +585,19 @@ footer {
     .list-logo a:nth-child(4) {
         margin-right: 10px;
     }
+    .previous-next-btn {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:319px) {
     h1 {
         font-size: 24px;
     }
-    .artikel-lain a,
-    p {
+    .previous,
+    .next,
+    .container>p {
         font-size: 14px;
     }
     .navbar li a {
@@ -659,27 +607,15 @@ footer {
     .bottom-nav {
         font-size: 13px;
     }
-    h3 {
-        font-size: 16.8px;
-    }
-    .content-body-badawi p {
-        font-size: 13px;
-    }
-    .title-komsat {
-        font-size: 17px !important;
-    }
-    .sumber,
-    .penulis {
-        font-size: 12px;
-    }
 }
 
 @media screen and (max-width:279px) {
     h1 {
         font-size: 22px;
     }
-    .artikel-lain a,
-    p {
+    .previous,
+    .next,
+    .container>p {
         font-size: 13px;
     }
     .navbar li a {
@@ -688,18 +624,6 @@ footer {
     .dropdown-content li a,
     .bottom-nav {
         font-size: 12px;
-    }
-    h3 {
-        font-size: 16px;
-    }
-    .content-body-badawi p {
-        font-size: 12px;
-    }
-    .title-komsat {
-        font-size: 16px !important;
-    }
-    .sumber {
-        font-size: 11px;
     }
 }
 

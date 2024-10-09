@@ -28,7 +28,7 @@ const Baitar = () => {
             <ul className='navbar'>
                 <li><a ><Link to="/homepage">Beranda</Link></a></li>
                 <li><a><Link to="/profile">Profile</Link></a></li>
-                <li><a href='peta.html'>Tulisan Kader</a></li>
+                <li><a><Link to="/tulisan">Tulisan Kader</Link></a></li>
                 <li className='dropdown'>
                     <a>Profil Komsat<i className='fas fa-angle-down' style={{fontSize: '17px', fontWeight: 600}}></i></a>
                     <ul className='dropdown-content'>
@@ -75,7 +75,7 @@ const Baitar = () => {
         </div>
         <div className="list-artikel">
             <div>
-                <p className="title">Profil Komsat</p>
+                <p className="title-komsat" style={{textAlign: 'center', fontStyle: 'italic', fontSize: 20, fontFamily: '-moz-initial'}}>Profil Komsat</p>
                 <div className="row-baitar">
                     <div className="column-baitar">
                         <a><Link to='/rizmi'>
@@ -116,7 +116,7 @@ const Baitar = () => {
                 </div>
             </div>
             <div>
-                <p className="title" style={{marginTop: '60px'}}>Destinasi Wisata Terpopuler</p>
+                <p className="title-komsat" style={{marginTop: '60px', textAlign: 'center', fontStyle: 'italic', fontSize: 20, fontFamily: '-moz-initial'}}>Destinasi Wisata Terpopuler</p>
                 <div className="row-baitar">
                     <div className="column-baitar">
                         <a href="desa-wisata-ketingan.html">
@@ -193,7 +193,7 @@ const Baitar = () => {
                 </div>
             </div>
             <div>
-                <p className="title" style={{marginTop: '60px'}}>Artikel Tim KKN PPM UGM Mentari Mlati 2023</p>
+                <p className="title-komsat" style={{marginTop: '60px'}}>Artikel Tim KKN PPM UGM Mentari Mlati 2023</p>
                 <div className="artikel-lain">
                     <a href="artikel-agro.html">Jurnal Kluster Agro Tim KKN PPM UGM Mentari Mlati</a>
                 </div>

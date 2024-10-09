@@ -55,7 +55,7 @@ const Profile = () => {
             <ul className='navbar'>
                 <li><a><Link to="/homepage">Beranda</Link></a></li>
                 <li><a className='active-navbar'><Link to="/profile">Profile</Link></a></li>
-                <li><a href='peta.html'>Tulisan Kader</a></li>
+                <li><a><Link to="/tulisan">Tulisan Kader</Link></a></li>
                 <li className='dropdown'>
                     <a>Profil Komsat<i class='fas fa-angle-down' style={{fontSize: '17px', fontWeight: 600}}></i></a>
                     <ul className='dropdown-content'>
@@ -76,9 +76,10 @@ const Profile = () => {
             <div className='bar'></div>
         </div>
     </header>
-    <main className="content">
-        <h1 className="title">PIMPINAN CABANG IMM BULAKSUMUR KARANGMALANG 2024</h1>
-        <div className="tema">EDUKATIF MENGGEMBIRAKAN SEBAGAI PERWUJUDAN DARI SEMANGAT BELAJAR DAN MEMBELAJARKAN DENGAN CARA-CARA
+    <main className="content-profile">
+        <h1 className="title-profile">PIMPINAN CABANG IMM BULAKSUMUR KARANGMALANG 2024</h1>
+        <br />
+        <div className="tema-profile">EDUKATIF MENGGEMBIRAKAN SEBAGAI PERWUJUDAN DARI SEMANGAT BELAJAR DAN MEMBELAJARKAN DENGAN CARA-CARA
             YANG CERDAS, ETIS, DAN BISA DITERIMA SEMUA KALANGAN SECARA MENYENANGKAN
         </div>
         {/* <img src={bskmImg} alt="Logo KKN Mentari Mlati" className="logo2"/> */}
@@ -404,7 +405,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">PENGURUS<br/>INTI</h3>
-                        <a href="output-program-kerja-subunit-sumberadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputpimpinan' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -413,7 +414,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>KADER</h3>
-                        <a href="output-program-kerja-subunit-sumberadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputkader' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -422,7 +423,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>ORGANISASI</h3>
-                        <a href="output-program-kerja-subunit-tlogoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputorganisasi' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -431,7 +432,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>IMMAWATI</h3>
-                        <a href="output-program-kerja-subunit-tirtoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputimmawati' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -440,7 +441,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>RPK</h3>
-                        <a href="output-program-kerja-subunit-tirtoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputrpk' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -449,7 +450,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>HIKMAH</h3>
-                        <a href="output-program-kerja-subunit-tirtoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputhikmah' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -458,7 +459,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>SPM</h3>
-                        <a href="output-program-kerja-subunit-tirtoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputspm' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -467,7 +468,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>TKK</h3>
-                        <a href="output-program-kerja-subunit-tirtoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputtkk' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -476,7 +477,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>EK</h3>
-                        <a href="output-program-kerja-subunit-tirtoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputek' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -485,7 +486,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>SBO</h3>
-                        <a href="output-program-kerja-subunit-tirtoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputsbo' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
                 <div className="column1">
@@ -494,7 +495,7 @@ const Profile = () => {
                         <div></div>
                         <div></div>
                         <h3 style={{textAlign: "center"}} className="subunit">BIDANG<br/>MEDKOM</h3>
-                        <a href="output-program-kerja-subunit-tirtoadi-halaman-pertama.html" style={{textAlign: "center"}}>Klik di sini</a>
+                        <Link to='/outputmedkom' style={{textAlign: "center"}}>Klik di sini</Link>
                     </div>
                 </div>
             </div>

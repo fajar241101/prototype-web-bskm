@@ -1,6 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -11,15 +14,14 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    color: #222;
 }
 
-.content-badawi {
-    display: flex;
-    flex-direction: row;
+.content-output {
+    flex: 1 0 auto;
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
-    color: #222;
 }
 
 header,
@@ -35,9 +37,8 @@ header {
     align-items: center;
     height: 75px;
     border-bottom: 1px solid #ddd;
-    background-color: #fff;
+    background-color: #Fff;
     flex-shrink: 0;
-    z-index: 999;
 }
 
 .logo {
@@ -108,7 +109,7 @@ ul {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     border-radius: 10px;
     color: #222;
     padding: 12px 0;
@@ -172,130 +173,104 @@ ul {
     -o-transform: translateY(-6px) rotate(-45deg);
 }
 
-.paragraf {
-    width: 100%;
-    text-align: justify;
-}
-
-.referensi {
-    overflow-x: hidden;
-}
-
-.referensi>p,
-.paragraf>p {
-    text-align: justify;
-    line-height: 1.5;
-}
-
-.img-container-badawi {
-    position: relative;
-    margin-top: 25px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-container-badawi>img {
-    width: 100%;
-    max-width: 40vw;
-    height: 25vw;
-    object-fit: cover;
-}
-
-.penulis {
-    font-size: 14px;
-}
-
-.sumber {
-    margin-top: 0;
-    text-align: center !important;
-    text-indent: 0 !important;
-    color: #555;
-    font-size: 14px;
-}
-
-.content-badawi {
-    display: flex;
-}
-
-.artikel {
-    margin-top: 5%;
-    flex: 3;
-    padding: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.list-artikel {
-    margin-top: 5%;
-    flex: 1;
-    padding: 50px;
-}
-
-.title-badawi {
-    margin-top: 0;
-    font-size: 21px;
-    font-weight: 500;
-}
-
-.row-badawi {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.column-badawi {
-    flex: 100%;
-    max-width: 100%;
-}
-
-.column-badawi a {
-    text-decoration: none;
+h1 {
     color: #222;
-}
-
-.content-body-badawi {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding-bottom: 5px;
-}
-
-.content-body-badawi:hover {
-    box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 10px 14px 0 rgba(0, 0, 0, 0.2);
-}
-
-.content-body-badawi img {
-    width: 100%;
-    height: 12vw;
-    object-fit: cover;
-}
-
-.content-body-badawi p {
-    font-size: 15px;
-    font-weight: 600;
     text-align: center;
-    margin-top: 10px;
+}
+
+.row-output {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 0 15px;
+}
+
+.column-output {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 15px;
+}
+
+.column-output .kotak-output {
+    border: 1px solid #ccc;
+    margin: 30px 0;
+    padding-bottom: 30px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.kotak-output>img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.kotak-output>p {
+    font-size: 15px;
+}
+
+.kotak-output>h3,
+.kotak-output>p,
+.kotak-output>a {
+    margin-left: 15px;
+    margin-right: 15px;
     margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
-.desa,
-.destinasi,
-.artikel-lain {
-    margin-bottom: 20px;
+.kotak-output p {
+    width: calc(100%-30px);
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
-.artikel-lain a {
+.kotak-output>p,
+.kotak-output>a {
+    margin-top: 0;
+}
+
+.kotak-output p:nth-last-child() {
+    padding-bottom: 20px;
+}
+
+.kotak-output a {
     text-decoration: none;
-    color: #222;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #800000;
+    padding: 10px;
+    /* background-color: #ebf7f9; */
 }
 
-.artikel-lain a:hover {
-    color: #800000;
+.kotak-output a:hover {
+    background-color: #f4d7d7;
+}
+
+.previous-next-btn {
+    margin-top: 30px;
+}
+
+.previous-next-btn a {
+    text-decoration: none;
+    padding: 8px 16px;
+    width: 100%;
+    font-weight: 600;
+}
+
+.previous-next-btn a:hover {
+    background-color: #222;
+}
+
+.next,
+.previous {
+    background-color: #800000;
+    color: #fff;
+    border-radius: 5px;
 }
 
 footer {
@@ -321,7 +296,7 @@ footer {
 .bottom-nav,
 .list-logo {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -396,47 +371,14 @@ footer {
 }
 
 @media screen and (max-width:1010px) {
-    .prev-btn {
-        left: 18.75%;
-    }
-    .next-btn {
-        right: 18.75%;
-    }
-    .prev-btn,
-    .next-btn {
-        font-size: 19px;
-        padding: 15px;
-    }
-}
-
-@media screen and (max-width:1030px) {
-    .content {
-        flex-direction: column;
-    }
-    .list-artikel div:nth-child(2) .row-badawi {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .list-artikel div:nth-child(1) .row-badawi .column,
-    .list-artikel div:nth-child(2) .row-badawi .column {
+    .column-output {
+        -ms-flex: 50%;
         flex: 50%;
-        max-width: 40%;
+        max-width: 50%;
     }
-    .list-artikel div:nth-child(1) .row-badawi .column a .content-body-badawi img,
-    .list-artikel div:nth-child(2) .row-badawi .column a .content-body-badawi img {
-        height: 25vw;
-    }
-    .artikel {
-        margin-bottom: 100px;
-    }
-    .list-artikel {
-        padding: 0px !important;
-    }
-    .img-container-badawi>img {
-        width: 100%;
-        max-width: 50vw;
-        height: 31.25vw;
+    .column-output:nth-child(3) .kotak-output:nth-child(1),
+    .column-output:nth-child(4) .kotak-output:nth-child(1) {
+        margin-top: 0px;
     }
 }
 
@@ -494,23 +436,9 @@ footer {
     .list-logo a img {
         height: 80px;
     }
-    .prev-btn {
-        left: 12.5%;
-    }
-    .next-btn {
-        right: 12.5%;
-    }
-    .prev-btn,
-    .next-btn {
-        font-size: 18px;
-        padding: 14px;
-    }
 }
 
 @media screen and (max-width:725px) {
-    .content-badawi{
-        flex-direction: column;
-    }
     .list-logo a img {
         height: 70px;
     }
@@ -536,10 +464,18 @@ footer {
 @media screen and (max-width:639px) {
     h1 {
         font-size: 28px;
+        text-align: center;
     }
-    .artikel-lain a,
+    h3 {
+        font-size: 18.8px;
+    }
+    .next,
+    .previous,
     p {
         font-size: 15px;
+    }
+    .kotak-output a {
+        font-size: 13px;
     }
     .navbar li a {
         font-size: 16px;
@@ -548,32 +484,16 @@ footer {
     .bottom-nav {
         font-size: 14px;
     }
-    h3 {
-        font-size: 18.8px;
-    }
-    .content-body-badawi p {
-        font-size: 14px;
-    }
-    .title-komsat {
-        font-size: 19px !important
-    }
-    .sumber,
-    .penulis {
-        font-size: 13px;
-    }
 }
 
-@media screen and(max-width:610px) {
-    .prev-btn {
-        left: 6.25%;
+@media screen and (max-width: 600px) {
+    .column-output {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
-    .next-btn {
-        right: 6.25%;
-    }
-    .prev-btn,
-    .next-btn {
-        font-size: 17px;
-        padding: 13px;
+    .column-output:not(:first-child) .kotak-output:nth-child(1) {
+        margin-top: 0px;
     }
 }
 
@@ -584,43 +504,6 @@ footer {
     }
     .list-logo a img {
         height: 50px;
-    }
-}
-
-@media screen and (max-width:550px) {
-    .img-container-badawi>img {
-        width: 100%;
-        max-width: 100vw;
-        height: calc(100vw*0.5);
-    }
-    .list-artikel div:nth-child(1) .row-badawi .column,
-    .list-artikel div:nth-child(2) .row-badawi .column {
-        flex: 100%;
-        max-width: 100%;
-    }
-    .list-artikel div:nth-child(1) .row-badawi .column a .content-body-badawi img,
-    .list-artikel div:nth-child(2) .row-badawi .column a .content-body-badawi img {
-        height: 62.5vw;
-    }
-    .img-container-badawi>img {
-        width: 100%;
-    }
-    .artikel {
-        padding: 20px !important;
-    }
-}
-
-@media screen and (max-width:420px) {
-    .prev-btn {
-        left: 0;
-    }
-    .next-btn {
-        right: 0;
-    }
-    .prev-btn,
-    .next-btn {
-        font-size: 16px;
-        padding: 12px;
     }
 }
 
@@ -648,9 +531,16 @@ footer {
     h1 {
         font-size: 24px;
     }
-    .artikel-lain a,
+    h3 {
+        font-size: 16.8px;
+    }
+    .next,
+    .previous,
     p {
         font-size: 14px;
+    }
+    .kotak-output a {
+        font-size: 12px;
     }
     .navbar li a {
         font-size: 15px;
@@ -659,28 +549,22 @@ footer {
     .bottom-nav {
         font-size: 13px;
     }
-    h3 {
-        font-size: 16.8px;
-    }
-    .content-body-badawi p {
-        font-size: 13px;
-    }
-    .title-komsat {
-        font-size: 17px !important;
-    }
-    .sumber,
-    .penulis {
-        font-size: 12px;
-    }
 }
 
 @media screen and (max-width:279px) {
     h1 {
         font-size: 22px;
     }
-    .artikel-lain a,
+    h3 {
+        font-size: 15.8px;
+    }
+    .next,
+    .previous,
     p {
         font-size: 13px;
+    }
+    .kotak-output a {
+        font-size: 11px;
     }
     .navbar li a {
         font-size: 14px;
@@ -688,18 +572,6 @@ footer {
     .dropdown-content li a,
     .bottom-nav {
         font-size: 12px;
-    }
-    h3 {
-        font-size: 16px;
-    }
-    .content-body-badawi p {
-        font-size: 12px;
-    }
-    .title-komsat {
-        font-size: 16px !important;
-    }
-    .sumber {
-        font-size: 11px;
     }
 }
 

@@ -75,7 +75,7 @@ const Badawi = () => {
         </div>
         <div className="list-artikel">
             <div>
-                <p className="title">Profil Komsat</p>
+                <p className="title-komsat" style={{textAlign: 'center', fontStyle: 'italic', fontSize: 20, fontFamily: '-moz-initial'}}>Profil Komsat</p>
                 <div className="row-badawi">
                     <div className="column-badawi">
                         <a><Link to='/rizmi'>
@@ -116,7 +116,7 @@ const Badawi = () => {
                 </div>
             </div>
             <div>
-                <p className="title" style={{marginTop: '60px'}}>Destinasi Wisata Terpopuler</p>
+                <p className="title-komsat" style={{marginTop: '60px', textAlign: 'center', fontStyle: 'italic', fontSize: 20, fontFamily: '-moz-initial'}}>Destinasi Wisata Terpopuler</p>
                 <div className="row-badawi">
                     <div className="column-badawi">
                         <a href="desa-wisata-ketingan.html">
@@ -193,7 +193,7 @@ const Badawi = () => {
                 </div>
             </div>
             <div>
-                <p className="title" style={{marginTop: '60px'}}>Artikel Tim KKN PPM UGM Mentari Mlati 2023</p>
+                <p className="title-komsat" style={{marginTop: '60px'}}>Artikel Tim KKN PPM UGM Mentari Mlati 2023</p>
                 <div className="artikel-lain">
                     <a href="artikel-agro.html">Jurnal Kluster Agro Tim KKN PPM UGM Mentari Mlati</a>
                 </div>

@@ -26,7 +26,7 @@ const Homepage = () => {
             <ul className='navbar'>
                 <li><a className='active-navbar'><Link to="/homepage">Beranda</Link></a></li>
                 <li><a><Link to="/profile">Profile</Link></a></li>
-                <li><a href='peta.html'>Tulisan Kader</a></li>
+                <li><a><Link to="/tulisan">Tulisan Kader</Link></a></li>
                 <li className='dropdown'>
                     <a>Profil Komsat<i class='fas fa-angle-down' style={{fontSize: '17px', fontWeight: 600}}></i></a>
                     <ul className='dropdown-content'>
@@ -47,7 +47,7 @@ const Homepage = () => {
             <div className='bar'></div>
         </div>
     </header>
-    <main className='content'>
+    <main className='content-home'>
         <div className='title1-img'>
             <div className='title1'>
                 <h1>Pimpinan Cabang <br/> Ikatan Mahasiswa Muhammadiyah</h1>
@@ -115,32 +115,34 @@ const Homepage = () => {
             <p style={{textAlign: 'center', marginTop: '30px', color: '#222', marginLeft: '5%', marginRight: '5%'}}><i>Pilihan destinasi wisata <b>terpopuler</b></i></p>
             <div className='row-homepage'>
                 <div className='column-homepage'>
-                    <a href='dheling-asri-tirtoadi.html'>
+                    <a><Link to='/dad'>
                         <div className='content-body2'>
                             <img src={logoImm} alt='Dheling Asri di Tirtoadi'/>
                             <h3 style={{textAlign: 'left'}}>Darul Arqam Dasar</h3>
                             <p style={{textAlign: 'justify', color: '#CB4745', fontWeight: '600px'}}>Pengkaderan</p>
                             <p style={{textAlign: 'justify'}}>Bidang Kader</p>
                         </div>
+                        </Link>
                     </a>
                 </div>
                 <div className='column-homepage'>
-                    <a href='desa-wisata-ketingan.html'>
+                    <a><Link to='/dam'>
                         <div className='content-body2'>
                             <img src={logoImm} alt='Dheling Asri di Tirtoadi'/>
-                            <h3 style={{textAlign: 'left'}}>Lorem</h3>
-                            <p style={{textAlign: 'justify', color: '#CB4745', fontWeight: '600px'}}>Lorem</p>
-                            <p style={{textAlign: 'justify'}}>Lorem</p>
+                            <h3 style={{textAlign: 'left'}}>Darul Arqam Madya</h3>
+                            <p style={{textAlign: 'justify', color: '#CB4745', fontWeight: '600px'}}>Pengkaderan</p>
+                            <p style={{textAlign: 'justify'}}>Bidang Kader</p>
                         </div>
+                        </Link>
                     </a>
                 </div>
                 <div className='column-homepage'>
                     <a href='embung-senja.html'>
                         <div className='content-body2'>
                             <img src={logoImm} alt='Dheling Asri di Tirtoadi'/>
-                            <h3 style={{textAlign: 'left'}}>Lorem</h3>
-                            <p style={{textAlign: 'justify', color: '#CB4745', fontWeight: '600px'}}>Lorem</p>
-                            <p style={{textAlign: 'justify'}}>Lorem</p>
+                            <h3 style={{textAlign: 'left'}}>Musyawarah Cabang</h3>
+                            <p style={{textAlign: 'justify', color: '#CB4745', fontWeight: '600px'}}>Keorganisasian</p>
+                            <p style={{textAlign: 'justify'}}>Bidang Organisasi</p>
                         </div>
                     </a>
                 </div>
@@ -148,9 +150,9 @@ const Homepage = () => {
                     <a href='embung-lampeyan.html'>
                         <div className='content-body2'>
                             <img src={logoImm} alt='Dheling Asri di Tirtoadi'/>
-                            <h3 style={{textAlign: 'left'}}>Lorem</h3>
-                            <p style={{textAlign: 'justify', color: '#CB4745', fontWeight: '600px'}}>Lorem</p>
-                            <p style={{textAlign: 'justify'}}>Lorem</p>
+                            <h3 style={{textAlign: 'left'}}>Evaluasi Tengah Periode</h3>
+                            <p style={{textAlign: 'justify', color: '#CB4745', fontWeight: '600px'}}>Keorganisasian</p>
+                            <p style={{textAlign: 'justify'}}>Bidang Organisasi</p>
                         </div>
                     </a>
                 </div>
@@ -158,9 +160,9 @@ const Homepage = () => {
                     <a href='sendang-nyamplungan.html'>
                         <div className='content-body2'>
                             <img src={logoImm} alt='Dheling Asri di Tirtoadi'/>
-                            <h3 style={{textAlign: 'left'}}>Lorem</h3>
+                            <h3 style={{textAlign: 'left'}}>Kajian Riset Isu Strategis</h3>
                             <p style={{textAlign: 'justify', color: '#CB4745', fontWeight: '600px'}}>Lorem</p>
-                            <p style={{textAlign: 'justify'}}>Lorem</p>
+                            <p style={{textAlign: 'justify'}}>Bidang Hikmah</p>
                         </div>
                     </a>
                 </div>
@@ -206,9 +208,9 @@ const Homepage = () => {
                 </div>
             </div><br/>
         </div>
-        <div className='hikayat-jonggat' style={{marginTop: '100px', marginBottom: '100px', marginRight: '5%', marginLeft: '5%'}}>
+        <div className='hikayat-jonggat' style={{marginTop: '100px', marginBottom: '100px', marginRight: '15%', marginLeft: '15%'}}>
             <a href='profil-kkn.html'>
-                <div className='box'>
+                <div className='box-homepage'>
                     <div className='subtitle'>
                         <p>Kenal lebih dekat dengan</p>
                         <h2 style={{marginTop: 0}}>PC IMM BSKM</h2>
